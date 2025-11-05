@@ -1,0 +1,246 @@
+.banner-container {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+}
+
+.gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #112D4E 0%, #3F72AF 50%, #DBE2EF 100%);
+    z-index: 1;
+}
+
+.animated-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(219, 226, 239, 0.4);
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(63, 114, 175, 0.3);
+    bottom: -50px;
+    right: 10%;
+    animation-delay: -7s;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background: rgba(219, 226, 239, 0.35);
+    top: 50%;
+    right: -75px;
+    animation-delay: -14s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(30px, -30px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-20px, 20px) rotate(240deg);
+    }
+}
+
+.banner-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 600px;
+}
+
+
+.profile-section {
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-ring {
+    position: relative;
+    display: inline-block;
+    padding: 6px;
+    background: linear-gradient(135deg, #DBE2EF 0%, #3F72AF 100%);
+    border-radius: 50%;
+    box-shadow: 0 20px 60px rgba(17, 45, 78, 0.4);
+}
+
+.profile-pic {
+    display: block;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    border: 4px solid #F9F7F7;
+    transition: transform 0.3s ease;
+}
+
+.profile-ring:hover .profile-pic {
+    transform: scale(1.05);
+}
+
+
+.info-section {
+    margin-bottom: 32px;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.name {
+    font-size: 42px;
+    font-weight: 800;
+    color: #F9F7F7;
+    margin: 0 0 16px 0;
+    text-shadow: 0 4px 12px rgba(17, 45, 78, 0.5);
+    letter-spacing: -0.5px;
+}
+
+.title-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.designation {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #112D4E;
+    background: #DBE2EF;
+    padding: 8px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(17, 45, 78, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 18px;
+    color: #DBE2EF;
+    font-weight: 500;
+}
+
+.location-icon {
+    width: 20px;
+    height: 20px;
+    color: #DBE2EF;
+}
+
+.social-section {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+.social-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background: rgba(219, 226, 239, 0.95);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(17, 45, 78, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.social-icon-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(17, 45, 78, 0.4);
+    background: #F9F7F7;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        min-height: 350px;
+        padding: 32px 16px;
+    }
+
+    .profile-pic {
+        height: 140px;
+        width: 140px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .designation {
+        font-size: 16px;
+        padding: 6px 20px;
+    }
+
+    .location {
+        font-size: 16px;
+    }
+
+    .social-icon-wrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
