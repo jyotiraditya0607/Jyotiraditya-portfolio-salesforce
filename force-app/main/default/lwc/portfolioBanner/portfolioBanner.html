@@ -23,34 +23,60 @@
                     <svg class="location-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
                     </svg>
-                    Kolkata, West Bengal
+                    {companyLocation}
                 </div>
             </div>
 
             <div class="social-section">
-                <a href={linkedinUrl} target="_blank" class="social-link" aria-label="LinkedIn">
-                    <div class="social-icon-wrapper">
-                        <img src={linkedin} class="social-icon" alt="LinkedIn"/>
-                    </div>
-                </a>
 
-                <a href={twitterUrl} target="_blank" class="social-link" aria-label="Twitter">
-                    <div class="social-icon-wrapper">
-                        <img src={twitter} class="social-icon" alt="Twitter"/>
-                    </div>
-                </a>
+                <template if:true={linkedinUrl}>
+                    <a href={linkedinUrl} target="_blank" class="social-link" aria-label="LinkedIn">
+                        <div class="social-icon-wrapper">
+                            <img src={linkedin} class="social-icon" alt="LinkedIn"/>
+                        </div>
+                    </a>
+                </template>
 
-                <a href={githubUrl} target="_blank" class="social-link" aria-label="GitHub">
-                    <div class="social-icon-wrapper">
-                        <img src={github} class="social-icon" alt="GitHub"/>
-                    </div>
-                </a>
+                <template if:true={twitterUrl}>
+                    <a href={twitterUrl} target="_blank" class="social-link" aria-label="Twitter">
+                        <div class="social-icon-wrapper">
+                            <img src={twitter} class="social-icon" alt="Twitter"/>
+                        </div>
+                    </a>
+                </template>
 
-                <a href={trailheadUrl} target="_blank" class="social-link" aria-label="Trailhead">
-                    <div class="social-icon-wrapper">
-                        <img src={trailhead} class="social-icon" alt="Trailhead"/>
-                    </div>
-                </a>
+                <template if:true={githubUrl}>
+                    <a href={githubUrl} target="_blank" class="social-link" aria-label="GitHub">
+                        <div class="social-icon-wrapper">
+                            <img src={github} class="social-icon" alt="GitHub"/>
+                        </div>
+                    </a>
+                </template>
+
+                <template if:true={trailheadUrl}>
+                    <a href={trailheadUrl} target="_blank" class="social-link" aria-label="Trailhead">
+                        <div class="social-icon-wrapper">
+                            <img src={trailhead} class="social-icon" alt="Trailhead"/>
+                        </div>
+                    </a>
+                </template>
+
+                <template if:true={blogUrl}>
+                    <a href={blogUrl} target="_blank" class="social-link" aria-label="Blog">
+                        <div class="social-icon-wrapper">
+                            <img src={blog} class="social-icon" alt="Blog"/>
+                        </div>
+                    </a>
+                </template>
+
+                <template if:true={youtubeUrl}>
+                    <a href={youtubeUrl} target="_blank" class="social-link" aria-label="Youtube">
+                        <div class="social-icon-wrapper">
+                            <img src={youtube} class="social-icon" alt="Youtube"/>
+                        </div>
+                    </a>
+                </template>
+
             </div>
         </div>
     </div>
