@@ -1,0 +1,26 @@
+<template>
+    <div class="wrapper-container">
+        <div class="gradient-accent"></div>
+        <lightning-layout multiple-rows class="content-layout">
+            <lightning-layout-item size="12" class="details-section">
+                <template if:true={recordId}>
+                    <c-portfolio-user-details 
+                        record-id={recordId}
+                        object-api-name={objectApiName}
+                        resume-url={resumeUrl}>
+                    </c-portfolio-user-details>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="stats-section">
+                <template if:true={rank}>
+                    <c-portfolio-user-stats
+                        rank={rank}
+                        badges={badges}
+                        points={points}
+                        trails={trails}>
+                    </c-portfolio-user-stats>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>
