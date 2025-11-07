@@ -1,0 +1,29 @@
+.wrapper-container {
+    position: relative;
+    background: linear-gradient(135deg, #112D4E 0%, #1a3a5c 100%);
+    padding: 32px 24px;
+    overflow: hidden;
+}
+
+.gradient-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3F72AF 0%, #DBE2EF 50%, #3F72AF 100%);
+    z-index: 1;
+}
+
+.content-layout {
+    position: relative;
+    z-index: 2;
+}
+
+.details-section {
+    margin-bottom: 24px;
+}
+
+.stats-section {
+    margin-top: 12px;
+}
