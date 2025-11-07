@@ -1,0 +1,332 @@
+.stats-wrapper {
+    padding: 16px 0;
+}
+
+.stats-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.header-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3F72AF, transparent);
+}
+
+.stats-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #DBE2EF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.rank-spotlight {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(63, 114, 175, 0.1), rgba(17, 45, 78, 0.2));
+    border-radius: 20px;
+    border: 1px solid rgba(63, 114, 175, 0.3);
+    overflow: hidden;
+}
+
+.rank-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(63, 114, 175, 0.3), transparent);
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+.rank-badge {
+    position: relative;
+    height: 140px;
+    width: auto;
+    filter: drop-shadow(0 8px 16px rgba(63, 114, 175, 0.4));
+    animation: float 3s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.rank-name {
+    position: relative;
+    font-size: 32px;
+    font-weight: 800;
+    color: #3F72AF;
+    margin: 16px 0 4px 0;
+    text-transform: capitalize;
+    z-index: 2;
+}
+
+.rank-subtitle {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: #DBE2EF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.stats-grid {
+    gap: 20px;
+}
+
+.stat-column {
+    padding: 10px;
+}
+
+.stat-box {
+    position: relative;
+    background: rgba(17, 45, 78, 0.4);
+    border: 2px solid rgba(63, 114, 175, 0.3);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 100%;
+}
+
+.stat-bg-pattern {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(63, 114, 175, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    transform: rotate(45deg);
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+    border-color: #3F72AF;
+    box-shadow: 0 12px 32px rgba(63, 114, 175, 0.3);
+    background: rgba(63, 114, 175, 0.15);
+}
+
+.stat-icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.badges-box .stat-icon-circle {
+    background: linear-gradient(135deg, #3F72AF, #5a8fd4);
+    box-shadow: 0 4px 16px rgba(63, 114, 175, 0.4);
+}
+
+.points-box .stat-icon-circle {
+    background: linear-gradient(135deg, #DBE2EF, #3F72AF);
+    box-shadow: 0 4px 16px rgba(219, 226, 239, 0.4);
+}
+
+.trails-box .stat-icon-circle {
+    background: linear-gradient(135deg, #112D4E, #3F72AF);
+    box-shadow: 0 4px 16px rgba(17, 45, 78, 0.6);
+}
+
+.stat-box:hover .stat-icon-circle {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.stat-svg {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+
+.points-box .stat-svg {
+    color: #112D4E;
+}
+
+.stat-content {
+    position: relative;
+    z-index: 2;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 900;
+    color: #3F72AF;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #DBE2EF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.stat-progress-bar {
+    position: relative;
+    height: 4px;
+    background: rgba(63, 114, 175, 0.2);
+    border-radius: 2px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 2px;
+    animation: fillBar 2s ease-out forwards;
+}
+
+.badges-fill {
+    background: linear-gradient(90deg, #3F72AF, #5a8fd4);
+    width: 85%;
+}
+
+.points-fill {
+    background: linear-gradient(90deg, #DBE2EF, #3F72AF);
+    width: 95%;
+}
+
+.trails-fill {
+    background: linear-gradient(90deg, #112D4E, #3F72AF);
+    width: 75%;
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+}
+
+
+@media (min-width: 1024px) {
+    .stats-grid,
+    .contact-grid {
+        flex-wrap: nowrap !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .stats-title {
+        font-size: 24px;
+    }
+    
+    .rank-badge {
+        height: 120px;
+    }
+    
+    .rank-name {
+        font-size: 28px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .stat-box {
+        padding: 24px 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .stats-header {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+    
+    .stats-title {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .rank-spotlight {
+        padding: 24px 16px;
+        margin-bottom: 32px;
+    }
+    
+    .rank-badge {
+        height: 80px;
+    }
+    
+    .rank-name {
+        font-size: 20px;
+    }
+    
+    .rank-subtitle {
+        font-size: 12px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
+    }
+    
+    .stat-column {
+        padding: 6px;
+    }
+    
+    .stat-box {
+        padding: 20px 16px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .stat-icon-circle {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .stat-content {
+        width: 100%; 
+    }
+
+    .stat-progress-bar {
+        width: 100%; 
+    }
+
+    .stat-svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .stats-grid {
+        gap: 12px;
+    }
+}

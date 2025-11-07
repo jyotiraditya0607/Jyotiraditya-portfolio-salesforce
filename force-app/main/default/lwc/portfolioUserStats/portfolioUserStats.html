@@ -1,0 +1,72 @@
+<template>
+    <div class="stats-wrapper">
+        <div class="stats-header">
+            <div class="header-line"></div>
+            <h2 class="stats-title">Trailhead Journey</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="rank-spotlight">
+            <div class="rank-glow"></div>
+            <img src={trailheadRankImg} alt="trailhead badge" class="rank-badge"/>
+            <p class="rank-name">{rank}</p>
+            <div class="rank-subtitle">Current Rank</div>
+        </div>
+
+        <lightning-layout multiple-rows class="stats-grid">
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" class="stat-column">
+                <div class="stat-box badges-box">
+                    <div class="stat-bg-pattern"></div>
+                    <div class="stat-icon-circle">
+                        <svg class="stat-svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">{badges}</div>
+                        <div class="stat-label">Badges Earned</div>
+                    </div>
+                    <div class="stat-progress-bar">
+                        <div class="progress-fill badges-fill"></div>
+                    </div>
+                </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" class="stat-column">
+                <div class="stat-box points-box">
+                    <div class="stat-bg-pattern"></div>
+                    <div class="stat-icon-circle">
+                        <svg class="stat-svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1.84.59 1.43 1.66 1.43.93 0 1.53-.49 1.53-1.18 0-.55-.29-1.03-1.29-1.29l-1.5-.37c-1.49-.37-2.17-1.35-2.17-2.47 0-1.5 1.05-2.63 2.87-3.03V6h2.67v1.83c1.61.34 2.63 1.46 2.68 3.06h-1.95c-.08-.79-.57-1.27-1.39-1.27-.91 0-1.42.49-1.42 1.16 0 .55.3.98 1.29 1.24l1.51.37c1.49.36 2.17 1.35 2.17 2.47 0 1.53-1.05 2.64-2.87 3.04z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">{points}</div>
+                        <div class="stat-label">Total Points</div>
+                    </div>
+                    <div class="stat-progress-bar">
+                        <div class="progress-fill points-fill"></div>
+                    </div>
+                </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" class="stat-column">
+                <div class="stat-box trails-box">
+                    <div class="stat-bg-pattern"></div>
+                    <div class="stat-icon-circle">
+                        <svg class="stat-svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">{trails}</div>
+                        <div class="stat-label">Trails Completed</div>
+                    </div>
+                    <div class="stat-progress-bar">
+                        <div class="progress-fill trails-fill"></div>
+                    </div>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>
