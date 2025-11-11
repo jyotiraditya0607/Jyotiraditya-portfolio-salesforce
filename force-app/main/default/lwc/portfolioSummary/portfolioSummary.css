@@ -1,0 +1,282 @@
+/* .summary-wrapper {
+    width: 100%;
+    background-color: #F9F7F7;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.summary-container {
+    width: 95%;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 6px 18px rgba(17, 45, 78, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.summary-container:hover {
+    box-shadow: 0 8px 28px rgba(17, 45, 78, 0.2);
+    transform: translateY(-4px);
+}
+
+.summary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-left: 6px solid #3F72AF;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-icon {
+    --slds-c-icon-color-foreground-default: #3F72AF;
+    --slds-c-icon-color-background: transparent;
+}
+
+.summary-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #DBE2EF;
+    margin: 0;
+}
+
+.summary-content {
+    background-color: #DBE2EF;
+    border-radius: 0.8rem;
+    padding: 1.8rem 2rem;
+    color: #112D4E;
+}
+
+.content-inner {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    word-wrap: break-word;
+}
+
+.summary-footer {
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.footer-accent {
+    height: 4px;
+    width: 90px;
+    background: #3F72AF;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .summary-container {
+        width: 98%;
+        padding: 2rem;
+    }
+
+    .summary-title {
+        font-size: 1.5rem;
+    }
+
+    .content-inner {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .summary-container {
+        width: 100%;
+        border-radius: 0;
+        padding: 1.5rem;
+    }
+
+    .summary-title {
+        font-size: 1.3rem;
+    }
+
+    .content-inner {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .summary-container {
+        padding: 1rem;
+    }
+
+    .summary-title {
+        font-size: 1.2rem;
+    }
+
+    .content-inner {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+} */
+
+/* --- Base Card Container --- */
+.summary-container {
+    /* Uses your light background color */
+    background-color: #F9F7F7; 
+    border-radius: 0.5rem; /* 8px */
+    /* Uses your light blue for the border */
+    border: 1px solid #DBE2EF; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow on light bg */
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    position: relative; /* Establishes a stacking context */
+    overflow: hidden; /* Clips the decorative circles */
+}
+
+/* --- Decorative Elements (Behind Content) --- */
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1; /* Very subtle */
+    z-index: 0; /* Sits behind the content */
+}
+
+.circle-1 {
+    width: 250px;
+    height: 250px;
+    /* Uses your medium blue */
+    background-color: #3F72AF; 
+    top: -120px;
+    right: -100px;
+}
+
+.circle-2 {
+    width: 180px;
+    height: 180px;
+    /* Uses your light blue */
+    background-color: #DBE2EF; 
+    bottom: -90px;
+    left: -75px;
+}
+
+.circle-3 {
+    width: 70px;
+    height: 70px;
+    background-color: #3F72AF;
+    bottom: 20px;
+    right: 40px;
+    opacity: 0.05; /* Even more subtle */
+}
+
+/* --- Content Sections (Above Decorations) --- */
+/* All content wrappers are set to z-index: 1 to appear *above* the circles */
+
+/* Header Section */
+.summary-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative; /* Sits above circles */
+    z-index: 1;
+}
+
+.icon-wrapper {
+    flex-shrink: 0; /* Prevents icon from shrinking */
+    margin-right: 1.25rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Uses your medium blue */
+    background-color: #3F72AF; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(63, 114, 175, 0.3);
+}
+
+.header-icon {
+    /* Sets icon color to your light background for contrast */
+    --sds-c-icon-color-foreground: #F9F7F7; 
+}
+
+.summary-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    /* Uses your darkest color for high-contrast text */
+    color: #112D4E; 
+    margin: 0;
+}
+
+/* Content Body Section */
+.summary-content {
+    padding: 0 1.5rem 1.5rem 1.5rem; /* Padding for the summary text */
+    position: relative; /* Sits above circles */
+    z-index: 1;
+}
+
+.content-inner {
+    /* Uses your darkest color for readable body text */
+    color: #112D4E; 
+    font-size: 1rem;
+    line-height: 1.6; /* Improves readability */
+    opacity: 0.9; /* Slightly softens the dark text */
+}
+
+/* Target the output field for better text flow */
+lightning-output-field {
+    display: block;
+}
+
+/* Footer Accent Bar */
+.summary-footer {
+    position: relative; /* Sits above circles */
+    z-index: 1;
+}
+
+.footer-accent {
+    width: 100%;
+    height: 6px;
+    /* Uses your darkest color for a strong accent */
+    background: #112D4E; 
+}
+
+/* --- Mobile Responsive (Small Devices) --- */
+@media (max-width: 480px) {
+    .summary-header {
+        padding: 1rem; /* Tighter padding */
+    }
+
+    .icon-wrapper {
+        width: 40px; /* Smaller icon */
+        height: 40px;
+        margin-right: 0.75rem; /* Less space */
+    }
+
+    .summary-title {
+        font-size: 1.3rem; /* Smaller title */
+    }
+
+    .summary-content {
+        padding: 0 1rem 1rem 1rem; /* Tighter padding */
+    }
+
+    .content-inner {
+        font-size: 0.95rem; /* Slightly smaller body text */
+    }
+
+    /* Make circles smaller */
+    .circle-1 {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+        right: -75px;
+    }
+
+    .circle-2 {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+        left: -50px;
+    }
+
+    .circle-3 {
+        display: none; /* Hide the 3rd circle on small screens */
+    }
+}

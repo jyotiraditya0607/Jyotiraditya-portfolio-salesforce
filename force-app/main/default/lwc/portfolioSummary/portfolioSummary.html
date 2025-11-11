@@ -1,0 +1,49 @@
+<!-- <template>
+    <div class="summary-container">
+        <lightning-record-view-form 
+            record-id={recordId}
+            object-api-name={objectApiName}>
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-output-field 
+                        field-name="Summary__c" 
+                        variant="label-hidden">
+                    </lightning-output-field>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-record-view-form>
+    </div>
+</template> -->
+<template>
+    <div class="summary-wrapper">
+        <div class="summary-container">
+            <div class="decorative-circle circle-1"></div>
+            <div class="decorative-circle circle-2"></div>
+            <div class="decorative-circle circle-3"></div>
+            
+            <div class="summary-header">
+                <div class="icon-wrapper">
+                    <lightning-icon icon-name="standard:article" size="large" class="header-icon"></lightning-icon>
+                </div>
+                <h2 class="summary-title">Summary</h2>
+            </div>
+            
+            <lightning-record-view-form 
+                record-id={recordId}
+                object-api-name={objectApiName}>
+                <div class="summary-content">
+                    <div class="content-inner">
+                        <lightning-output-field 
+                            field-name="Summary__c" 
+                            variant="label-hidden">
+                        </lightning-output-field>
+                    </div>
+                </div>
+            </lightning-record-view-form>
+            
+            <div class="summary-footer">
+                <div class="footer-accent"></div>
+            </div>
+        </div>
+    </div>
+</template>

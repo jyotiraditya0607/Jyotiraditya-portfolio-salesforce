@@ -1,0 +1,32 @@
+<template>
+        <lightning-tabset variant="scoped">
+            <lightning-tab label="Summary">
+                <!-- check if recordId is there then only the summary field is lodead -->
+                <template if:true={recordId}>               
+                    <c-portfolio-summary 
+                        record-id={recordId}
+                        object-api-name={objectApiName}>
+                    </c-portfolio-summary>
+                </template>
+            </lightning-tab>
+
+            <lightning-tab label="Personal Projects">
+                Personal Project Content !
+            </lightning-tab>
+            <lightning-tab label="Skills">
+                Sills Content !
+            </lightning-tab>
+            <lightning-tab label="Education">
+                Education Content !
+            </lightning-tab>
+            <lightning-tab label="Certifications">
+                Certifications Content !
+            </lightning-tab>
+            <lightning-tab label="Blog">
+                Blog Content !
+            </lightning-tab>
+            <lightning-tab label="Work Experience">
+                Work Experience Content !
+            </lightning-tab>
+        </lightning-tabset>
+</template>
